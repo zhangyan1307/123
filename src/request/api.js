@@ -3,4 +3,4 @@
  */
 import { get, post } from './http'
 //登入接口
-//export const login = p => post('login', p);
+export const list = p => post('business/outpatRegistinfo/list', p);

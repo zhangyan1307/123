@@ -187,7 +187,7 @@ export default {
   flex-direction: column;
   nav {
     width: 100%;
-    height: 64px;
+    height: 40px;
   }
   .pick {
     width: 100%;

@@ -14,7 +14,17 @@
       <i class="iconfont icon-search1"></i>
       <i class="iconfont icon-close" v-if="close" @click="clear"></i>
     </div>
-    <main></main>
+    <main>
+     <div class="main_Container">
+        <div class="main_Container_pic"></div>
+        <div class="main_Container_info">
+          <p>罗江萍医生的诊室</p>
+          <p>就诊人：miss</p>
+          <p>科室：罗江萍名中医工作室</p>
+        </div>
+        <div class="main_Container_date">2020-07-20</div>
+       </div> 
+    </main>
   </div>
 </template>
 
@@ -55,7 +65,7 @@ export default {
   flex-direction: column;
   nav {
     width: 100%;
-    height: 64px;
+    height: 40px;
     background-color: #fff;
   }
   .Search {
@@ -87,6 +97,40 @@ export default {
   }
   main {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    .main_Container{
+      width: 100%;
+      height: 82px;
+      background-color: #fff;
+      padding: 5px 10px 10px 10px;
+      display: flex;
+      justify-content: space-between;
+      div:nth-child(1){
+        width: 42px;
+        height: 42px;
+        background-color: skyblue;
+        border-radius: 50%;
+      }
+      div:nth-child(2){
+        padding: 5px 0 0 10px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p:nth-child(2){
+          font-size: 12px;
+          color: #2185d3;
+        }
+        p:nth-child(3){
+          color: #666;
+        }
+      }
+      div:nth-child(3){
+        padding-top: 5px;
+        color: #999;
+      }
+    }
   }
 }
 </style>

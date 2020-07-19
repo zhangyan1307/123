@@ -68,6 +68,7 @@ export default {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    user-select: none;
     span {
       flex: 1;
       display: flex;

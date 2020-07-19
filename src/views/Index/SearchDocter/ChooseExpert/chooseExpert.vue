@@ -14,17 +14,22 @@
     </div>
     <!-- 专家信息区域 -->
     <main>
-      <div class="expert_info" v-for="(item,index) in expertInfo" :key="index">
+      <div
+        class="expert_info"
+        v-for="(item, index) in expertInfo"
+        :key="index"
+        @click="pushGeneralInformationOfDoctors"
+      >
         <div class="expert_true_info">
           <div class="header_pic"></div>
           <div class="intro">
             <div class="intro_name_job">
-              <div class="intro_name">{{item.expertName}}</div>
-              <div class="intro_job">{{item.experJob}}</div>
+              <div class="intro_name">{{ item.expertName }}</div>
+              <div class="intro_job">{{ item.experJob }}</div>
             </div>
-            <div class="section">{{item.section}}</div>
+            <div class="section">{{ item.section }}</div>
             <div class="intro_true">
-              {{item.content}}
+              {{ item.content }}
             </div>
           </div>
         </div>
@@ -37,51 +42,57 @@
 import top from "../../../../components/Header/header.vue";
 export default {
   components: {
-    top,
+    top
   },
   data() {
     return {
       title: "选择专家",
       value: "", //输入框值,
       close: false, //输入框显示标识
-      expertInfo:[
-          {
-              expertName:'张三',
-              experJob:'科员',
-              section:'组织部',
-              content:'你大爷我是你大爷我是你大爷我是你大爷我是你大爷我是你大爷我是你大爷我是你大爷'
-          },
-          {
-              expertName:'李四',
-              experJob:'部长',
-              section:'纪检部',
-              content:'你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子'
-          },
-          {
-              expertName:'王五',
-              experJob:'厅长',
-              section:'公安部',
-              content:'你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子'
-          },
-          {
-              expertName:'张三',
-              experJob:'科员',
-              section:'组织部',
-              content:'你大爷我是你大爷我是你大爷我是你大爷我是你大爷我是你大爷我是你大爷我是你大爷'
-          },
-          {
-              expertName:'李四',
-              experJob:'部长',
-              section:'纪检部',
-              content:'你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子'
-          },
-          {
-              expertName:'王五',
-              experJob:'厅长',
-              section:'公安部',
-              content:'你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子'
-          }
-      ],//搜索的专家信息
+      expertInfo: [
+        {
+          expertName: "张三",
+          experJob: "科员",
+          section: "组织部",
+          content:
+            "你大爷我是你大爷我是你大爷我是你大爷我是你大爷我是你大爷我是你大爷我是你大爷"
+        },
+        {
+          expertName: "李四",
+          experJob: "部长",
+          section: "纪检部",
+          content:
+            "你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子"
+        },
+        {
+          expertName: "王五",
+          experJob: "厅长",
+          section: "公安部",
+          content:
+            "你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子"
+        },
+        {
+          expertName: "张三",
+          experJob: "科员",
+          section: "组织部",
+          content:
+            "你大爷我是你大爷我是你大爷我是你大爷我是你大爷我是你大爷我是你大爷我是你大爷"
+        },
+        {
+          expertName: "李四",
+          experJob: "部长",
+          section: "纪检部",
+          content:
+            "你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子"
+        },
+        {
+          expertName: "王五",
+          experJob: "厅长",
+          section: "公安部",
+          content:
+            "你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子你儿子"
+        }
+      ] //搜索的专家信息
     };
   },
   methods: {
@@ -98,7 +109,13 @@ export default {
       this.value = "";
       this.close = false;
     },
-  },
+    //跳转到医生综合信息组件
+    pushGeneralInformationOfDoctors() {
+      this.$router.push({
+        path: "/GeneralInformationOfDoctors"
+      });
+    }
+  }
 };
 </script>
 
@@ -110,7 +127,7 @@ export default {
   flex-direction: column;
   nav {
     width: 100%;
-    height: 64px;
+    height: 40px;
   }
   .search {
     width: 100%;
@@ -175,18 +192,18 @@ export default {
               align-self: center;
             }
           }
-          .section{
-              color: #666;
+          .section {
+            color: #666;
           }
           .intro_true {
-              overflow: hidden;
-              text-overflow: ellipsis;
-              display: -webkit-box;
-              -webkit-line-clamp: 2; // 控制多行的行数
-              -webkit-box-orient: vertical;
-              color: #999;
-              font-size: 11px;
-            }
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; // 控制多行的行数
+            -webkit-box-orient: vertical;
+            color: #999;
+            font-size: 11px;
+          }
         }
       }
     }

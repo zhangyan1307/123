@@ -1,18 +1,10 @@
 <template>
-  <div class="introductionDoctor">
+  <div class="IntroductionOfExperts">
     <nav>
-      <top :title="title"></top>
+      <top :title="'专家介绍'"></top>
     </nav>
-    <!-- 搜索框 -->
-    <div class="search-box">
-      <input
-        type="text"
-        placeholder="请输入关键字"
-        v-model="value"
-        @input="input"
-      />
-      <i class="iconfont icon-search1"></i>
-      <i class="iconfont icon-close" v-if="close" @click="clear"></i>
+    <div class="title">
+      <span>儿科</span>
     </div>
     <main>
       <div class="main_Container" @click="pushChoosingPhysician">
@@ -33,41 +25,25 @@
 </template>
 
 <script>
-import top from "../../../../components/Header/header.vue";
+import top from "@/components/Header/header";
 export default {
   components: {
     top
   },
-  data() {
-    return {
-      title: "专家介绍",
-      close: false, //控制关闭图标显示
-      value: "" //输入框的值
-    };
-  },
-  methods: {
-    input() {
-      if (this.value) {
-        this.close = true;
-      } else {
-        this.close = false;
-      }
-    },
-    //清空输入kuang
-    clear() {
-      this.value = "";
-      this.close = false;
-    },
+  methods:{
     //跳转到选择医师组件
     pushChoosingPhysician(){
       this.$router.push("/ChoosingPhysician")
     }
+  },
+  mounted() {
+    console.log(this.$route);
   }
 };
 </script>
 
 <style lang="less" scoped>
-.introductionDoctor {
+.IntroductionOfExperts {
   width: 100%;
   height: 100%;
   display: flex;
@@ -76,30 +52,14 @@ export default {
     width: 100%;
     height: 40px;
   }
-  .search-box {
+  .title {
     width: 100%;
-    height: 54px;
-    background-color: #fff;
-    padding: 10px 16px;
-    position: relative;
-    input {
-      width: 100%;
-      height: 100%;
-      background-color: #f7f8fa;
-      border-radius: 10px;
-      text-indent: 2em;
-    }
-    .icon-search1 {
-      position: absolute;
-      top: 50%;
-      left: 20px;
-      transform: translateY(-50%);
-    }
-    .icon-close {
-      position: absolute;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
+    padding-left: 10px;
+    padding-bottom: 8px;
+    span {
+      border-left: 8px solid #008c8c;
+      padding-left: 5px;
+      font-size: 13px;
     }
   }
   main {

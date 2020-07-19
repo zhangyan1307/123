@@ -7,8 +7,9 @@ import store from "@/store/index"
 import "lib-flexible"
 import Vant from 'vant';
 import 'vant/lib/index.css';
-import { Toast } from 'vant';
+import { Toast,Dialog } from 'vant';
 Vue.prototype.Toast=Toast
+Vue.prototype.Dialog=Dialog
 Vue.use(Vant);
 Vue.config.productionTip = false
 

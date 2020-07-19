@@ -26,7 +26,7 @@ import top from '@/components/Header/header'
     flex-direction: column;
     nav{
         width: 100%;
-        height: 64px;
+        height: 40px;
     }
     main{
         flex: 1;

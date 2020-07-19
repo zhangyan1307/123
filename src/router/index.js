@@ -39,6 +39,8 @@ import RehabilitationGuidelines from '@/views/Index/User/RehabilitationGuideline
 import MyInvoice from '@/views/Index/User/MyInvoice/MyInvoice'//我的发票组件
 import MedicalRecords from '@/views/Index/User/MedicalRecords/MedicalRecords'//就诊记录
 import ChoosingPhysician from '@/views/Index/SearchDocter/ChoosingPhysician/ChoosingPhysician'//选择医师组件
+import IntroductionOfExperts from '@/views/Index/SearchDocter/IntroductionOfExperts/IntroductionOfExperts'//挂号跳转专家介绍组件
+import GeneralInformationOfDoctors from '@/views/Index/ConsultingRoom/GeneralInformationOfDoctors/GeneralInformationOfDoctors'//医生综合信息组件
 Vue.use(Router)
 
 export default new Router({
@@ -184,6 +186,14 @@ export default new Router({
     {
       path:'/ChoosingPhysician',
       component:ChoosingPhysician
+    },
+    {
+      path:'/IntroductionOfExperts',
+      component:IntroductionOfExperts
+    },
+    {
+      path:'/GeneralInformationOfDoctors',
+      component:GeneralInformationOfDoctors
     },
     {
       path: "/index",

@@ -78,7 +78,7 @@ export default {
   padding-bottom: 26px;
   nav {
     width: 100%;
-    height: 64px;
+    height: 40px;
   }
   .gray {
     width: 100%;

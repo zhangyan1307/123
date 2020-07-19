@@ -21,7 +21,7 @@ import top from '@/components/Header/header'
     height: 100%;
     nav{
         width: 100%;
-        height: 64px;
+        height: 40px;
     }
 }
 </style>

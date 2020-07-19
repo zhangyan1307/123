@@ -121,15 +121,14 @@ export default {
     display: flex;
     padding: 17px 11px;
     color: #666666;
-    div {
-      flex: 1;
-    }
     .Visited_container_left {
+      flex: 1.5;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
     .Visited_container_center {
+      flex: 1.5;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -138,6 +137,7 @@ export default {
       }
     }
     .Visited_container_right {
+      flex: 1;
       display: flex;
       justify-content: center;
       button {

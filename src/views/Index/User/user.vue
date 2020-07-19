@@ -74,11 +74,9 @@ export default {
 .user {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
   nav{
       width: 100%;
-      height: 64px;
+      height: 40px;
       background-color: #5fc7fc;
       color: #fff;
   }
@@ -122,9 +120,9 @@ export default {
       background-color: #fff;
       border-radius: 10px;
       position: absolute;
-      bottom: -60%;
+      bottom: -50px;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
       display: flex;
       padding: 15px 0;
       justify-content: space-around;
@@ -141,7 +139,6 @@ export default {
     }
   }
   main {
-    flex: 1;
     padding: 71px 14px;
     .main_Container {
       width: 100%;
