@@ -41,6 +41,7 @@ import MedicalRecords from '@/views/Index/User/MedicalRecords/MedicalRecords'//�
 import ChoosingPhysician from '@/views/Index/SearchDocter/ChoosingPhysician/ChoosingPhysician'//选择医师组件
 import IntroductionOfExperts from '@/views/Index/SearchDocter/IntroductionOfExperts/IntroductionOfExperts'//挂号跳转专家介绍组件
 import GeneralInformationOfDoctors from '@/views/Index/ConsultingRoom/GeneralInformationOfDoctors/GeneralInformationOfDoctors'//医生综合信息组件
+import PlaceOrder from '@/views/Index/SearchDocter/PlaceOrder/PlaceOrder'//提交订单组件
 Vue.use(Router)
 
 export default new Router({
@@ -194,6 +195,10 @@ export default new Router({
     {
       path:'/GeneralInformationOfDoctors',
       component:GeneralInformationOfDoctors
+    },
+    {
+      path:'/PlaceOrder',
+      component:PlaceOrder
     },
     {
       path: "/index",
